@@ -1,0 +1,136 @@
+Building configuration...
+
+Current configuration : 1977 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+ip cef
+no ip domain lookup
+ip domain name lab.com
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+username admin privilege 15 secret 5 $1$qe87$ls.6rf9QPWTz5xMyfR5ld/
+!
+!
+ip tcp synwait-time 5
+ip ssh time-out 60
+ip ssh version 2
+! 
+!
+!
+!
+!
+interface Ethernet0/0
+ no ip address
+ shutdown
+ duplex auto
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex full
+ speed 1000
+ media-type gbic
+ negotiation auto
+!
+interface GigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 10.20.10.1 255.255.255.0
+!
+interface GigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 10.20.20.1 255.255.255.0
+!
+interface GigabitEthernet0/0.99
+ encapsulation dot1Q 99
+ ip address 192.168.3.1 255.255.255.0
+!
+interface GigabitEthernet1/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet2/0
+ ip address 10.0.2.2 255.255.255.252
+ negotiation auto
+!
+!
+router ospf 1
+ router-id 3.3.3.3
+ log-adjacency-changes
+ network 10.0.2.0 0.0.0.3 area 0
+ network 10.20.10.0 0.0.0.255 area 0
+ network 10.20.20.0 0.0.0.255 area 0
+ network 192.168.3.0 0.0.0.255 area 0
+!
+ip forward-protocol nd
+ip route 10.0.1.0 255.255.255.252 10.0.2.1
+ip route 10.10.10.0 255.255.255.0 10.0.2.1
+ip route 10.10.20.0 255.255.255.0 10.0.2.1
+ip route 192.168.1.0 255.255.255.0 10.0.2.1
+ip route 192.168.2.0 255.255.255.0 10.0.2.1
+ip route 192.168.10.0 255.255.255.0 10.0.2.1
+ip route 192.168.20.0 255.255.255.0 10.0.2.1
+!
+no ip http server
+no ip http secure-server
+!
+!
+no cdp log mismatch duplex
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+gatekeeper
+ shutdown
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ logging synchronous
+ login local
+ transport input ssh
+!
+!
+end

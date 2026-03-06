@@ -1,0 +1,149 @@
+2025-11-23 20:54:34,947 - vlan_config - INFO - Kết nối tới Switch1
+2025-11-23 20:54:34,967 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:54:35,429 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:54:37,275 - vlan_config - INFO - Cấu hình VLAN thành công cho Switch1
+2025-11-23 20:54:38,277 - vlan_config - INFO - Kết nối tới Switch2
+2025-11-23 20:54:38,360 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:54:38,820 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:54:42,395 - vlan_config - INFO - Cấu hình VLAN thành công cho Switch2
+2025-11-23 20:54:43,396 - vlan_config - INFO - Kết nối tới Switch3
+2025-11-23 20:54:43,470 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:54:43,965 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:54:47,588 - vlan_config - INFO - Cấu hình VLAN thành công cho Switch3
+2025-11-23 20:54:50,097 - ip_config - WARNING - Không có cấu hình IP cho Switch1
+2025-11-23 20:54:50,098 - ip_config - INFO - Kết nối tới R1
+2025-11-23 20:54:50,114 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:54:50,646 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:54:51,853 - ip_config - INFO - Cấu hình IP thành công cho R1
+2025-11-23 20:54:52,855 - ip_config - INFO - Kết nối tới R2
+2025-11-23 20:54:52,892 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:54:53,747 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:54:55,436 - ip_config - INFO - Cấu hình IP thành công cho R2
+2025-11-23 20:54:56,437 - ip_config - INFO - Kết nối tới R3
+2025-11-23 20:54:56,494 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:54:57,403 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:54:59,284 - ip_config - INFO - Cấu hình IP thành công cho R3
+2025-11-23 20:55:00,285 - ip_config - WARNING - Không có cấu hình IP cho Switch2
+2025-11-23 20:55:00,286 - ip_config - WARNING - Không có cấu hình IP cho Switch3
+2025-11-23 20:55:03,575 - ospf_config - INFO - Kết nối tới R1
+2025-11-23 20:55:03,594 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:55:04,136 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:55:15,231 - ospf_config - INFO - Cấu hình OSPF thành công cho R1
+2025-11-23 20:55:16,232 - ospf_config - INFO - Kết nối tới R2
+2025-11-23 20:55:16,296 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:55:17,229 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:55:28,885 - ospf_config - INFO - Cấu hình OSPF thành công cho R2
+2025-11-23 20:55:29,886 - ospf_config - INFO - Kết nối tới R3
+2025-11-23 20:55:29,935 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:55:30,830 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:55:42,590 - ospf_config - INFO - Cấu hình OSPF thành công cho R3
+2025-11-23 20:55:49,787 - backup - INFO - Bắt đầu backup Switch1
+2025-11-23 20:55:49,802 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:55:50,271 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:55:50,698 - backup - INFO - Backup thành công Switch1 - 1848 bytes
+2025-11-23 20:55:51,699 - backup - INFO - Bắt đầu backup R1
+2025-11-23 20:55:51,728 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:55:52,276 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:55:52,744 - backup - INFO - Backup thành công R1 - 2179 bytes
+2025-11-23 20:55:53,746 - backup - INFO - Bắt đầu backup R2
+2025-11-23 20:55:53,812 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:55:54,755 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:55:55,444 - backup - INFO - Backup thành công R2 - 2174 bytes
+2025-11-23 20:55:56,445 - backup - INFO - Bắt đầu backup R3
+2025-11-23 20:55:56,508 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:55:57,439 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:55:58,131 - backup - INFO - Backup thành công R3 - 2174 bytes
+2025-11-23 20:55:59,132 - backup - INFO - Bắt đầu backup Switch2
+2025-11-23 20:55:59,212 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:55:59,685 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:56:00,482 - backup - INFO - Backup thành công Switch2 - 1796 bytes
+2025-11-23 20:56:01,483 - backup - INFO - Bắt đầu backup Switch3
+2025-11-23 20:56:01,565 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:56:02,051 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:56:02,768 - backup - INFO - Backup thành công Switch3 - 1795 bytes
+2025-11-23 20:56:09,025 - static_route_config - INFO - Kết nối tới R1
+2025-11-23 20:56:09,047 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:56:09,594 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:56:10,647 - static_route_config - INFO - Cấu hình Static Route thành công cho R1
+2025-11-23 20:56:11,648 - static_route_config - INFO - Kết nối tới R2
+2025-11-23 20:56:11,709 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:56:12,626 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:56:14,548 - static_route_config - INFO - Cấu hình Static Route thành công cho R2
+2025-11-23 20:56:15,549 - static_route_config - INFO - Kết nối tới R3
+2025-11-23 20:56:15,604 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:56:16,524 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:56:18,480 - static_route_config - INFO - Cấu hình Static Route thành công cho R3
+2025-11-23 20:56:37,775 - backup - INFO - Bắt đầu backup R1
+2025-11-23 20:56:37,797 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:56:38,344 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:56:38,812 - backup - INFO - Backup thành công R1 - 2179 bytes
+2025-11-23 20:56:42,974 - backup - WARNING - Mô phỏng lỗi trên R1
+2025-11-23 20:56:43,001 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:56:43,548 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:56:49,352 - backup - INFO - Bắt đầu restore R1 từ E:\1_MON_HOC\Mangmaytinhnangcao\N12_52200256_52200248_52200286_52200233_08\Sources\reports\backups\R1_backup_20251123_205638.txt
+2025-11-23 20:56:49,374 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:56:49,929 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:56:52,736 - backup - INFO - Restore thành công R1
+2025-11-23 20:57:10,146 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:10,615 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:11,285 - monitoring - INFO - Kết nối thành công tới Switch1
+2025-11-23 20:57:12,314 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:12,861 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:13,340 - monitoring - INFO - Kết nối thành công tới R1
+2025-11-23 20:57:14,403 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:15,339 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:16,165 - monitoring - INFO - Kết nối thành công tới R2
+2025-11-23 20:57:17,227 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:18,146 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:18,985 - monitoring - INFO - Kết nối thành công tới R3
+2025-11-23 20:57:20,053 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:20,768 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:21,892 - monitoring - INFO - Kết nối thành công tới Switch2
+2025-11-23 20:57:22,977 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:23,473 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:24,583 - monitoring - INFO - Kết nối thành công tới Switch3
+2025-11-23 20:57:27,367 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:27,832 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:28,419 - monitoring - INFO - Đã kiểm tra interface của Switch1
+2025-11-23 20:57:29,440 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:29,975 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:30,418 - monitoring - INFO - Đã kiểm tra interface của R1
+2025-11-23 20:57:31,476 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:32,380 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:33,090 - monitoring - INFO - Đã kiểm tra interface của R2
+2025-11-23 20:57:34,148 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:35,049 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:35,621 - monitoring - INFO - Đã kiểm tra interface của R3
+2025-11-23 20:57:36,704 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:37,199 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:38,318 - monitoring - INFO - Đã kiểm tra interface của Switch2
+2025-11-23 20:57:39,412 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:39,909 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:40,892 - monitoring - INFO - Đã kiểm tra interface của Switch3
+2025-11-23 20:57:42,603 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:43,139 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:43,575 - monitoring - INFO - Đã kiểm tra routing table của R1
+2025-11-23 20:57:44,616 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:45,469 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:45,997 - monitoring - INFO - Đã kiểm tra routing table của R2
+2025-11-23 20:57:47,033 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:47,921 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:48,589 - monitoring - INFO - Đã kiểm tra routing table của R3
+2025-11-23 20:57:51,083 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:51,558 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:52,234 - monitoring - INFO - Đã kiểm tra VLAN của Switch1
+2025-11-23 20:57:53,320 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:53,805 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:55,065 - monitoring - INFO - Đã kiểm tra VLAN của Switch2
+2025-11-23 20:57:56,124 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:57:56,553 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:57:57,608 - monitoring - INFO - Đã kiểm tra VLAN của Switch3
+2025-11-23 20:58:00,155 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:58:00,690 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:58:01,221 - monitoring - INFO - Đã kiểm tra OSPF của R1
+2025-11-23 20:58:02,268 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:58:03,220 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:58:03,985 - monitoring - INFO - Đã kiểm tra OSPF của R2
+2025-11-23 20:58:05,047 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-11-23 20:58:05,970 - paramiko.transport - INFO - Authentication (password) successful!
+2025-11-23 20:58:06,763 - monitoring - INFO - Đã kiểm tra OSPF của R3

@@ -1,0 +1,22 @@
+﻿status,hostname,ip,vlan_info,timestamp
+SUCCESS,Switch1,192.168.1.2,"
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    
+10   VLAN_10                          active    Et0/2
+20   VLAN_20                          active    Et0/3
+99   net",2025-11-23 20:57:52
+SUCCESS,Switch2,192.168.2.2,"
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Et0/3
+10   VLAN_10                          active    Et0/1
+20   VLAN_20                          active    Et0/2
+99 ",2025-11-23 20:57:55
+SUCCESS,Switch3,192.168.3.2,"
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Et0/3
+10   VLAN_10                          active    Et0/1
+20   VLAN_20                          active    Et0/2
+99 ",2025-11-23 20:57:57

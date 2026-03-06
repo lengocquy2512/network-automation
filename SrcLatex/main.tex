@@ -1,0 +1,189 @@
+\documentclass{article} 
+% Lưu ý: Nếu trong các file 'chuong1.tex', 'chuong2.tex'... bạn dùng lệnh \chapter 
+% thì phải đổi \documentclass{article} thành \documentclass{report}.
+
+% --- CẤU HÌNH CHO XELATEX (QUAN TRỌNG) ---
+\usepackage{fontspec}
+\usepackage[vietnamese]{babel}
+
+% Cấu hình Font chữ:
+% Nếu chạy trên Overleaf, hãy dùng FreeSerif (giống Times New Roman).
+% Nếu chạy trên máy tính Windows cá nhân, bạn có thể bỏ comment dòng Times New Roman.
+\setmainfont{FreeSerif} 
+%\setmainfont{Times New Roman} 
+
+% -----------------------------------------
+
+\usepackage[fontsize=13pt]{scrextend} 
+\usepackage[left=3cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
+
+% Các gói bảng biểu và hình ảnh
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{longtable}
+\usepackage{hhline}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{graphicx} 
+\usepackage{float} 
+\usepackage{wrapfig}
+
+% Các gói toán học và định lý
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Các gói định dạng văn bản
+\usepackage{indentfirst} % Thụt đầu dòng đoạn đầu tiên
+\usepackage{listings} % Chèn code
+\usepackage{titlesec} % Định dạng thẻ Heading
+\usepackage[font=bf]{caption} % Định dạng chú thích hình/bảng
+\usepackage{enumitem} % Định dạng danh sách
+\usepackage{lipsum} % Tạo văn bản giả
+
+% Các gói vẽ hình và tham khảo
+\usepackage{tikz} 
+\usetikzlibrary{calc}
+\usepackage{cite} 
+\bibliographystyle{IEEEtran}
+
+% Gói Hyperref (Nên để gần cuối)
+\usepackage[unicode,colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black]{hyperref}
+
+% --- ĐỊNH DẠNG HIỂN THỊ ---
+\renewcommand{\baselinestretch}{1.2} % Giãn dòng (Thường báo cáo để 1.2 - 1.5 cho dễ đọc)
+\setlength{\parskip}{6pt} % Khoảng cách giữa các đoạn
+\setlength{\parindent}{1cm} % Thụt đầu dòng
+
+% Cấu hình Heading (Section)
+\setcounter{secnumdepth}{4} 
+\titlespacing*{\section}{0pt}{0pt}{15pt}
+\titleformat*{\section}{\fontsize{16pt}{0pt}\selectfont \bfseries \centering \uppercase}
+
+\titlespacing*{\subsection}{0pt}{6pt}{0pt}
+\titleformat*{\subsection}{\fontsize{14pt}{0pt}\selectfont \bfseries}
+
+\titlespacing*{\subsubsection}{0pt}{6pt}{0pt}
+\titleformat*{\subsubsection}{\fontsize{13pt}{0pt}\selectfont \bfseries \itshape}
+
+\titlespacing*{\paragraph}{0pt}{0pt}{0pt}
+\titleformat*{\paragraph}{\fontsize{13pt}{0pt}\selectfont \itshape}
+
+% Đổi tên mặc định sang tiếng Việt
+\renewcommand{\figurename}{\fontsize{12pt}{0pt}\selectfont \bfseries Hình}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\captionsetup[figure]{labelsep=space}
+
+\renewcommand{\tablename}{\fontsize{12pt}{0pt}\selectfont \bfseries Bảng}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\captionsetup[table]{labelsep=space}
+
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\listfigurename}{DANH MỤC HÌNH VẼ}
+\renewcommand{\listtablename}{DANH MỤC BẢNG BIỂU}
+\renewcommand{\refname}{TÀI LIỆU THAM KHẢO}
+
+% Định nghĩa lại cột cho tabularx
+\newcolumntype{s}{>{\hsize=.3\hsize}X}
+\newcolumntype{y}{>{\hsize=.4\hsize}X}
+\newcolumntype{d}{>{\hsize=.1\hsize}X}
+\newcolumntype{a}{>{\hsize=1.1\hsize}X}
+\newcolumntype{g}{>{\hsize=5\hsize}X}
+\renewcommand{\tabularxcolumn}[1]{>{\small}m{#1}}
+
+% Định lý
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\newtheorem{theorem}{Định lý}[section]
+\newtheorem{defn}[theorem]{Định nghĩa}
+\newtheorem{corollary}[theorem]{Hệ quả}
+\newtheorem{lemma}[theorem]{Bổ đề}
+
+% Vòng lặp
+\usepackage{forloop}
+\newcounter{loopcntr}
+\newcommand{\rpt}[2][1]{\forloop{loopcntr}{0}{\value{loopcntr}<#1}{#2}}
+
+% Cấu hình danh sách (itemize/enumerate)
+\setitemize{itemsep=0pt,leftmargin=1.25cm,topsep = 3pt}
+
+% --- DỮ LIỆU BIẾN (MACROS) ---
+\newcommand{\khoa}{CÔNG NGHỆ THÔNG TIN}
+\newcommand{\mon}{MẠNG MÁY TÍNH NÂNG CAO}
+\newcommand{\chuyennganh}{MẠNG MÁY TÍNH VÀ TRUYỀN THÔNG DỮ LIỆU}
+\newcommand{\de}{TỰ ĐỘNG HÓA CẤU HÌNH MẠNG DOANH NGHIỆP SỬ DỤNG PYTHON}
+\newcommand{\gvhd}{TS. TRƯƠNG ĐÌNH TÚ}
+\newcommand{\svmot}{LÊ NGỌC QUY - 52200256}
+\newcommand{\svhai}{LẠI QUỐC HƯNG - 52200248}
+\newcommand{\svba}{NGUYỄN THANH PHÁT - 52200286}
+\newcommand{\svbon}{CHIÊM HUỲNH DUY TIẾN - 52200233}
+\newcommand{\lop}{22050401}
+\newcommand{\khoahoc}{26}
+\newcommand{\nam}{2025}
+
+% ================= NỘI DUNG =================
+\begin{document}
+	
+	% Các trang bìa và thủ tục
+	\input{Template/TrangBia}
+	\input{Template/TrangPhuBia}
+	\input{Template/LoiCamOn}
+	\input{Template/CamKet}
+	\input{Template/TomTat}
+	
+	% Mục lục
+	\addtocontents{toc}{\protect\thispagestyle{empty}}
+	\tableofcontents 
+	\thispagestyle{empty}
+	\cleardoublepage
+	
+	\pagenumbering{roman} % Đánh số i, ii, iii...
+	
+	% Danh mục hình
+	{\let\oldnumberline\numberline
+		\renewcommand{\numberline}{Hình~\oldnumberline}
+		\listoffigures} 
+	\phantomsection\addcontentsline{toc}{section}{DANH MỤC HÌNH VẼ}
+	\newpage
+	
+	% Danh mục bảng
+	{\let\oldnumberline\numberline
+		\renewcommand{\numberline}{Bảng~\oldnumberline}
+		\listoftables}
+	\phantomsection\addcontentsline{toc}{section}{DANH MỤC BẢNG BIỂU}
+	\newpage
+	
+	\input{Template/DanhMucVietTat}
+	
+	\pagenumbering{arabic} % Đánh số 1, 2, 3...
+
+	% --- NỘI DUNG CHÍNH ---
+    % Lưu ý: Đảm bảo trong các file chuongX.tex sử dụng \section{} thay vì \chapter{}
+    % vì bạn đang dùng \documentclass{article}.
+    
+	\include{chuongs/chuong1}       
+	\newpage
+	
+	\include{chuongs/chuong2} 
+	\newpage \clearpage
+
+	\include{chuongs/chuong3}
+	\newpage \clearpage
+	
+	\include{chuongs/chuong4}
+	\newpage \clearpage
+
+	\include{chuongs/chuong5}
+	\newpage \clearpage
+
+    \include{chuongs/chuong6}
+	\newpage \clearpage
+	% --- TÀI LIỆU THAM KHẢO ---
+	\phantomsection
+    \addcontentsline{toc}{section}{TÀI LIỆU THAM KHẢO} 
+    \bibliography{tailieuthamkhao} 
+    \newpage
+	
+	% \input{appendix} % Phụ lục
+	
+\end{document}

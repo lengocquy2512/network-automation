@@ -1,0 +1,7 @@
+hostname,ip,username,password,device_type
+Switch1,192.168.1.2,admin,cisco,cisco_ios
+R1,192.168.1.1,admin,cisco,cisco_ios
+R2,10.0.1.2,admin,cisco,cisco_ios
+R3,10.0.2.2,admin,cisco,cisco_ios
+Switch2,192.168.2.2,admin,cisco,cisco_ios
+Switch3,192.168.3.2,admin,cisco,cisco_ios

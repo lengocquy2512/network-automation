@@ -1,0 +1,13 @@
+﻿status,hostname,ip,timestamp,verification
+SUCCESS,R1,192.168.1.1,2025-11-23 20:54:51,"Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                unassigned      YES manual administratively down down    
+GigabitEthernet0/0         unassigned      YES manual up                    up      
+GigabitEthernet0/0.10      192.168.10.1    YE"
+SUCCESS,R2,10.0.1.2,2025-11-23 20:54:55,"Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                unassigned      YES NVRAM  administratively down down    
+GigabitEthernet0/0         unassigned      YES NVRAM  up                    up      
+GigabitEthernet0/0.10      10.10.10.1      YE"
+SUCCESS,R3,10.0.2.2,2025-11-23 20:54:59,"Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                unassigned      YES NVRAM  administratively down down    
+GigabitEthernet0/0         unassigned      YES NVRAM  up                    up      
+GigabitEthernet0/0.10      10.20.10.1      YE"

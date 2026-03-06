@@ -1,0 +1,11 @@
+﻿status,hostname,ip,timestamp,ospf_neighbors,ospf_routes
+SUCCESS,R1,192.168.1.1,2025-11-23 20:55:15,"
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+3.3.3.3           1   FULL/DR         00:00:32    10.0.2.2        GigabitEthernet2/0
+2.2.2.2           1   FULL/DR         ",
+SUCCESS,R2,10.0.1.2,2025-11-23 20:55:28,"
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.1.1           1   FULL/BDR        00:00:38    10.0.1.1        GigabitEthernet1/0",
+SUCCESS,R3,10.0.2.2,2025-11-23 20:55:42,"
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.1.1           1   FULL/BDR        00:00:34    10.0.2.1        GigabitEthernet2/0",

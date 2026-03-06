@@ -1,0 +1,36 @@
+﻿status,hostname,ip,timestamp,static_routes,routing_table
+SUCCESS,R1,192.168.1.1,2025-11-23 20:56:10,"     10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+S       10.20.20.0/24 [1/0] via 10.0.2.2
+S       10.10.10.0/24 [1/0] via 10.0.1.2
+S       10.20.10.0/24 [1/0] via 10.0.2.2
+S       10.10.20.0/24 [1/0] via 10.0.1.2
+S    192.168.2.0/24 [1/0] via 10.0.1.2
+S    192.168.3.0/24 [1/0] via 10.0.2.2","Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary"
+SUCCESS,R2,10.0.1.2,2025-11-23 20:56:14,"S    192.168.10.0/24 [1/0] via 10.0.1.1
+S    192.168.20.0/24 [1/0] via 10.0.1.1
+     10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+S       10.0.2.0/30 [1/0] via 10.0.1.1
+S       10.20.20.0/24 [1/0] via 10.0.1.1
+S       10.20.10.0/24 [1/0] via 10.0.1.1
+S    192.168.1.0/24 [1/0] via 10.0.1.1
+S ","Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary"
+SUCCESS,R3,10.0.2.2,2025-11-23 20:56:18,"S    192.168.10.0/24 [1/0] via 10.0.2.1
+S    192.168.20.0/24 [1/0] via 10.0.2.1
+     10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+S       10.10.10.0/24 [1/0] via 10.0.2.1
+S       10.0.1.0/30 [1/0] via 10.0.2.1
+S       10.10.20.0/24 [1/0] via 10.0.2.1
+S    192.168.1.0/24 [1/0] via 10.0.2.1
+S ","Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary"

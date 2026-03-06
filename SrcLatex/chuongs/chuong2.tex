@@ -1,0 +1,64 @@
+\section*{CHƯƠNG 2 - CƠ SỞ LÝ THUYẾT}
+\addcontentsline{toc}{section}{\numberline{}CHƯƠNG 2 -  CƠ SỞ LÝ THUYẾT}
+	\setcounter{section}{2}
+	\setcounter{subsection}{0}
+	\setcounter{figure}{0}
+	\setcounter{table}{0}
+
+%---------Phân trình bày nội dung chương 2
+Chương này sẽ cung cấp những kiến thức nền tảng về các công nghệ được sử dụng trong đề tài.
+
+\subsection{Giới thiệu về Network Automation:}
+    Network Automation, hay tự động hóa mạng, là quá trình sử dụng phần mềm để tự động hóa các tác vụ cấu hình, quản lý, kiểm tra và vận hành hạ tầng mạng máy tính. Thay vì phải thực hiện thủ công từng lệnh trên từng thiết bị, kỹ thuật viên có thể viết các chương trình hoặc script để thực thi hàng loạt các thao tác phức tạp trên nhiều thiết bị cùng một lúc, đảm bảo tính nhất quán và giảm thiểu sai sót.
+    
+    Trong mô hình truyền thống, quản trị viên mạng phải đăng nhập vào từng thiết bị thông qua console hoặc SSH, sau đó nhập các lệnh cấu hình theo cú pháp của từng nhà sản xuất. Quy trình này không chỉ tốn thời gian mà còn dễ dẫn đến các lỗi như nhầm lẫn cú pháp, quên bước, hoặc cấu hình không đồng nhất giữa các thiết bị. Network Automation giải quyết những vấn đề này bằng cách mã hóa các best practice thành code, cho phép thực thi nhanh chóng, đáng tin cậy và có thể lặp lại nhiều lần.
+    
+    Các lợi ích chính của Network Automation bao gồm việc tăng tốc độ triển khai cấu hình từ hàng giờ xuống còn vài phút, giảm đáng kể tỷ lệ lỗi cấu hình từ 40-60\% trong phương pháp thủ công xuống dưới 5\%, và cải thiện khả năng phản ứng với sự cố. Hơn nữa, automation cho phép thực hiện các chiến lược backup và restore cấu hình tự động, đảm bảo business continuity trong trường hợp xảy ra thảm họa. Từ góc độ vận hành, tự động hóa giúp giải phóng thời gian của đội ngũ IT để tập trung vào các dự án có giá trị cao hơn thay vì các công việc lặp đi lặp lại.
+    
+    Xu hướng hiện đại trong Network Automation đang chuyển từ các script đơn giản sang các framework phức tạp hơn như Ansible, SaltStack, và các giải pháp IBN. Tuy nhiên, việc nắm vững các nguyên lý cơ bản thông qua lập trình Python và các thư viện như Netmiko vẫn là nền tảng quan trọng, giúp hiểu rõ bản chất của việc tương tác với thiết bị mạng qua API và giao thức SSH
+
+
+\subsection{Thư viện Netmiko và cách hoạt động:}
+    Netmiko là một thư viện Python mã nguồn mở được phát triển bởi Kirk Byers, được thiết kế đặc biệt để đơn giản hóa việc kết nối SSH đến các thiết bị mạng và thực thi các lệnh trên chúng. Thư viện này được xây dựng trên nền tảng Paramiko, một implementation của giao thức SSHv2 trong Python, nhưng bổ sung thêm nhiều tính năng được tối ưu hóa cho network device.
+
+    Về mặt kiến trúc, Netmiko hoạt động theo mô hình client-server, trong đó script Python đóng vai trò client thiết lập kết nối SSH đến thiết bị mạng (server). Quá trình kết nối bắt đầu bằng việc khởi tạo một object ConnectHandler với các tham số bao gồm device\_type (loại thiết bị như cisco\_ios, cisco\_nxos), host (địa chỉ IP hoặc hostname), username, password, và các tùy chọn khác như secret (enable password). Netmiko tự động xử lý quá trình handshake SSH, authentication, và thiết lập session\cite{Python-Automation-Book}.
+
+    Một trong những điểm mạnh của Netmiko là khả năng tự động phát hiện và xử lý các prompt khác nhau của thiết bị. Khi một lệnh được gửi đi thông qua phương thức send\_command(), Netmiko sẽ đợi cho đến khi nhận được prompt tiếp theo từ thiết bị trước khi trả về kết quả. Điều này giải quyết vấn đề timing trong automation, vì các lệnh khác nhau có thể mất thời gian thực thi khác nhau. Thư viện cũng hỗ trợ phương thức send\_config\_set() để gửi nhiều lệnh cấu hình cùng lúc, tự động vào config mode và thoát ra sau khi hoàn thành.
+
+    Netmiko xử lý nhiều trường hợp đặc biệt trong quá trị mạng Cisco, chẳng hạn như tự động nhập enable password khi cần, xử lý các câu hỏi xác nhận (như "Do you want to continue?"), và quản lý session timeout. Thư viện cũng hỗ trợ TextFSM, một công cụ parsing mạnh mẽ cho phép chuyển đổi output dạng text không cấu trúc thành dữ liệu có cấu trúc như dictionary hoặc list, giúp việc xử lý và phân tích kết quả trở nên dễ dàng hơn nhiều.
+    
+    Về bảo mật, Netmiko sử dụng SSH làm giao thức truyền tải chính, đảm bảo toàn bộ communication giữa script và thiết bị được mã hóa. Thư viện cũng hỗ trợ nhiều phương thức authentication khác nhau bao gồm password-based và key-based authentication, cho phép triển khai các chiến lược bảo mật linh hoạt. Tuy nhiên, việc quản lý credentials trong script cần được thực hiện cẩn thận, thường thông qua các biến môi trường hoặc vault management tools thay vì hard-code trực tiếp trong code\cite{NetworkJourney-Netmiko-2024}.
+\subsection{Giao thức SSH trong quản trị mạng:}
+    SSH là giao thức mạng mã hóa được sử dụng rộng rãi để truy cập và quản trị các hệ thống từ xa một cách an toàn. Trong quản trị mạng, SSH đã thay thế gần như hoàn toàn giao thức Telnet không bảo mật, trở thành tiêu chuẩn công nghiệp cho việc quản lý thiết bị mạng từ xa.
+
+    SSH hoạt động trên mô hình client-server, sử dụng cổng TCP 22 mặc định. Giao thức này cung cấp ba dịch vụ bảo mật chính: authentication (xác thực danh tính), confidentiality (bảo mật dữ liệu thông qua mã hóa), và integrity (đảm bảo dữ liệu không bị thay đổi trong quá trình truyền). Quá trình thiết lập kết nối SSH diễn ra qua nhiều giai đoạn, bắt đầu với việc trao đổi phiên bản và thuật toán mã hóa, tiếp theo là key exchange để thiết lập session key, và cuối cùng là authentication của client.
+
+    Trong bối cảnh network automation, SSH đóng vai trò then chốt vì nó cho phép script tự động kết nối đến thiết bị mà không cần sự can thiệp của con người sau khi được cấu hình đúng. SSH hỗ trợ nhiều phương thức authentication, phổ biến nhất là password-based authentication và public key authentication. Public key authentication được ưa chuộng hơn trong môi trường automation vì nó không yêu cầu truyền password qua mạng và có thể được tự động hóa hoàn toàn thông qua SSH agent hoặc key files.
+
+    Một khía cạnh quan trọng của SSH trong automation là khả năng thiết lập session persistence và connection pooling. Thay vì phải thiết lập kết nối mới cho mỗi lệnh, SSH cho phép duy trì một session duy nhất và thực thi nhiều lệnh tuần tự, giảm overhead và tăng hiệu suất. Điều này đặc biệt quan trọng khi thực hiện cấu hình phức tạp yêu cầu nhiều bước hoặc khi phải thu thập thông tin từ nhiều thiết bị.
+    
+    SSH cũng cung cấp các cơ chế để xử lý timeout và connection failures, cho phép script automation có thể retry hoặc fallback sang phương án khác khi gặp vấn đề mạng. Các tính năng như keepalive packets giúp duy trì kết nối trong các session dài, tránh bị disconnect do idle timeout. Trong triển khai thực tế, việc cấu hình đúng các tham số SSH như connection timeout, banner timeout, và command timeout là rất quan trọng để đảm bảo script hoạt động ổn định trong môi trường mạng không hoàn hảo.
+\subsection{VLAN, OSPF và IP Routing cơ bản:}
+\subsubsection{Virtual LAN:}
+    Virtual LAN (VLAN) là công nghệ cho phép phân đoạn một mạng vật lý thành nhiều mạng logic độc lập ở tầng Data Link (Layer 2) của mô hình OSI. Thay vì phải sử dụng các switch vật lý riêng biệt cho từng phòng ban hoặc nhóm người dùng, VLAN cho phép tạo ra các broadcast domain khác nhau trên cùng một hạ tầng switch vật lý, tối ưu hóa việc sử dụng thiết bị và giảm chi phí.
+    
+    Nguyên lý hoạt động của VLAN dựa trên việc gán tag (thẻ) cho các frame Ethernet theo chuẩn IEEE 802.1Q. Mỗi VLAN được định danh bởi một VLAN ID (VID) nằm trong khoảng từ 1 đến 4094, với VLAN 1 thường là VLAN mặc định. Khi một frame đi qua trunk port (cổng nối giữa các switch), nó được gắn thêm 4 bytes chứa thông tin VLAN ID, cho phép nhiều VLAN được truyền qua cùng một đường link vật lý. Các access port (cổng kết nối thiết bị đầu cuối) chỉ thuộc về một VLAN duy nhất và tự động gỡ bỏ tag trước khi chuyển frame đến thiết bị.
+    
+    VLAN mang lại nhiều lợi ích quan trọng trong quản trị mạng doanh nghiệp. Về mặt bảo mật, VLAN tạo ra sự cô lập logic giữa các nhóm người dùng, ngăn chặn việc truy cập trái phép vào các segment mạng nhạy cảm. Về hiệu năng, VLAN giúp giảm kích thước broadcast domain, hạn chế lưu lượng broadcast không cần thiết và cải thiện băng thông khả dụng. VLAN cũng tạo điều kiện cho việc triển khai QoS, cho phép ưu tiên lưu lượng của các ứng dụng quan trọng như VoIP hoặc video conferencing.
+\subsubsection{Open Shortest Path First:}
+    OSPF là một giao thức định tuyến động thuộc loại IGP, sử dụng thuật toán link-state để xây dựng và duy trì bảng định tuyến\cite{GeeksforGeeks-OSPF}\cite{Cloudflare-OSPF}. Khác với các giao thức distance-vector như RIP, OSPF lưu trữ toàn bộ topology của mạng và sử dụng thuật toán Dijkstra để tính toán đường đi ngắn nhất (shortest path) đến mỗi destination network.
+    
+    Hoạt động của OSPF bắt đầu với việc các router thiết lập neighbor relationship thông qua việc trao đổi Hello packets trên các interface được kích hoạt OSPF. Sau khi adjacency được hình thành, các router sẽ trao đổi LSAs chứa thông tin về các link trực tiếp kết nối với chúng\cite{Cisco-OSPF-7039-1}. Mỗi router xây dựng một LSDB giống hệt nhau, sau đó chạy thuật toán SPF để tính toán đường đi tốt nhất đến mỗi network, kết quả được lưu trong routing table.
+    
+    OSPF sử dụng khái niệm metric dựa trên cost, được tính theo công thức cost = reference bandwidth / interface bandwidth\cite{Cisco-OSPF-7039-1}. Mặc định, reference bandwidth là 100 Mbps, có nghĩa là một link FastEthernet 100Mbps có cost là 1, trong khi link Gigabit Ethernet có cost là 1 (do giá trị minimum). Metric này có thể được điều chỉnh thủ công để kiểm soát traffic engineering.
+    
+    Một tính năng quan trọng của OSPF là khả năng phân vùng mạng thành các area nhằm giảm overhead và tăng khả năng mở rộng\cite{GeeksforGeeks-OSPF}. Area 0 (backbone area) là area bắt buộc mà tất cả các area khác phải kết nối đến, tạo thành cấu trúc two-level hierarchy. OSPF cũng hỗ trợ các tính năng nâng cao như route summarization, stub area, và virtual link, cho phép thiết kế mạng linh hoạt và hiệu quả\cite{Cisco-OSPF-7039-1}.
+\subsubsection{IP Routing cơ bản:}
+    IP Routing là quá trình chuyển tiếp gói tin IP từ một mạng này sang mạng khác dựa trên địa chỉ IP đích\cite{Cloudflare-Routing}\cite{CompTIA-Routing}. Mỗi router duy trì một routing table chứa thông tin về các network đích và interface hoặc next-hop router để chuyển tiếp gói tin đến đích đó. Quá trình routing diễn ra ở tầng Network (Layer 3) của mô hình OSI và là nền tảng của hoạt động Internet toàn cầu.
+    
+    Routing table có thể được populate thông qua ba phương thức chính: directly connected networks (các mạng kết nối trực tiếp), static routes (được cấu hình thủ công bởi administrator), và dynamic routes (được học thông qua các giao thức định tuyến động như OSPF, EIGRP, BGP)\cite{CompTIA-Routing}. Mỗi entry trong routing table bao gồm destination network, subnet mask, next-hop IP hoặc exit interface, metric, và AD để xác định độ tin cậy của nguồn thông tin routing.
+    
+    Khi router nhận được một gói tin, nó thực hiện longest prefix matching để tìm entry phù hợp nhất trong routing table. Ví dụ, nếu có hai route: 192.168.1.0/24 và 192.168.1.128/25, gói tin đến 192.168.1.150 sẽ khớp với route /25 vì nó có prefix dài hơn và specific hơn. Nếu không tìm thấy route nào khớp, gói tin sẽ được chuyển đến default route (nếu có) hoặc bị drop.
+    
+    Trong môi trường sử dụng VLAN, routing giữa các VLAN là cần thiết vì các VLAN khác nhau thuộc các broadcast domain riêng biệt và không thể communicate trực tiếp ở Layer 2. Inter-VLAN routing có thể được thực hiện thông qua router truyền thống với các physical interface riêng cho mỗi VLAN (phương pháp router-on-a-stick sử dụng subinterface), hoặc thông qua Layer 3 switch với SVI. Phương pháp Layer 3 switch được ưa chuộng trong các mạng hiện đại vì hiệu năng cao và cấu hình đơn giản hơn.
+

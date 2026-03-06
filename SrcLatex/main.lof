@@ -1,0 +1,80 @@
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Timeline sự phát triển của mạng máy tính}}{7}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Kết nối điểm-điểm}}{8}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Kết nối đa điểm}}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Mô hình mạng tuyến tính}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Mô hình mạng vòng}}{9}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Mô hình mạng sao}}{10}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Mô hình mạng LAN}}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Thiết bị Switch Cisco Catalyst 2960G-48TC-L}}{18}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Thiết bị bộ định tuyến không dây TPLink}}{19}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Thiết bị định tuyến có dây TPLink}}{20}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Thiết bị Access Point}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Thiết bị USB Wifi}}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Thiết bị Wifi Repeater}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Bộ Phát 4G}}{23}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Thiết bị Telephone Planet Voip ICF-1900}}{23}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Thiết bị Camera IP Wifi EBITCAM EBO 2}}{24}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Giao diện ứng dụng phần mềm Cisco Packet Tracer}}{25}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Hiện tượng switching loop}}{33}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sơ đồ mô hình hệ thống mạng LAN hiện đại cho doanh nghiệp}}{50}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Sơ đồ Logical của hệ thống mạng}}{62}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Sơ đồ Physical của hệ thống mạng}}{63}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Cấu hình dịch vụ DHCP}}{77}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Cấu hình dịch vụ DNS}}{77}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Cấu hình dịch vụ MAIl}}{78}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Cấu hình dịch vụ FTP}}{78}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Cấu hình dịch vụ WEB}}{79}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Cấu hình dịch vụ Radius}}{79}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Cấu hình dịch vụ CAMERA}}{80}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Cấu hình Interface}}{80}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Cấu hình Interface GuestT1}}{81}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Cấu hình Interface NhanVienT1}}{82}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Cấu hình AAA}}{83}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Cấu hình WLAN GuestT1}}{83}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Cấu hình WLAN GuestT1 Security}}{84}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Cấu hình WLAN GuestT1 Security}}{84}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Cấu hình WLAN GuestT1 Advance}}{85}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Cấu hình WLAN NhanVienT1}}{85}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Cấu hình WLAN NhanVienT1 Security}}{86}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Cấu hình WLAN NhanVienT1 Advance}}{86}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Cấu hình WLAN NhanVienT1 Advance}}{87}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Cấu hình gom nhóm AP}}{87}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Cấu hình gom nhóm tầng 1}}{88}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Cấu hình gom nhóm các AP tầng 1}}{88}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Cấu hình gom nhóm các WLAN tầng 1}}{88}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ping thành công giữa PC Giám đốc và PC Quản lý}}{89}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ping thành công giữa PC Giám đốc và PC Marketing}}{90}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ping thành công giữa PC Giám đốc và PC Nhân viên}}{90}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Kết nối thành công ra Internet}}{91}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Nhận DHCP thành công}}{91}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Kết nối với trang web công ty thông quan DNS}}{92}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Sử dụng tài khoản Email được cung cấp}}{92}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Gửi mail }}{93}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Nhận mail}}{93}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Phản hồi mail}}{93}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Kết nối và đăng nhập dịch vụ FTP}}{94}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Gửi file lên Server}}{95}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Nhận file từ Server}}{95}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Thực hiện quay số}}{96}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Cuộc gọi được kết nối}}{96}{figure.caption.64}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Kết nối với tư cách Guest}}{97}{figure.caption.65}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Kết nối với Internet}}{97}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Kết nối web nội bộ thất bại}}{98}{figure.caption.67}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Từ chối kết nối với mạng nội bộ}}{98}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Kết nối với tư cách là Nhân viên}}{99}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Kết nối với Internet}}{99}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Kết nối web nội bộ}}{100}{figure.caption.71}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Kết nối thành công hệ thống mạng nội bộ}}{100}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Truy cập địa chỉ Server Camera}}{101}{figure.caption.73}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Bật camera}}{101}{figure.caption.74}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Tắt camera}}{102}{figure.caption.75}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Kết nối Internet}}{102}{figure.caption.76}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Kết nối mạng nội bộ}}{103}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Điền thông tin VPN và kết nối}}{103}{figure.caption.78}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Kết nối VPN thành công và được cấp địa chỉ}}{104}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Truy cập mạng nội bộ thành công}}{104}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Truy cập web nội bộ}}{105}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces Truy cập quản lý Camera}}{105}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces Ping từ PC Giám đốc đến PC Quản lý}}{106}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces Ping từ PC Giám đốc đến PC Quản lý}}{106}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces Ping từ PC Giám đốc đến Server và PC nội bộ}}{106}{figure.caption.85}%
